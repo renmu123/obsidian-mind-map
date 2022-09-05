@@ -6,7 +6,7 @@ on:
       - "*"
 
 env:
-  PLUGIN_NAME: dist
+  PLUGIN_NAME: MindMap
 
 jobs:
   build:
