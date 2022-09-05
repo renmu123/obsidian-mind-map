@@ -35,7 +35,7 @@ export default defineConfig({
         },
       },
       external: ["obsidian"],
-      plugins: [typescript(), nodeResolve({ browser: true }), commonjs()],
+      plugins: [typescript(), nodeResolve({ browser: false }), commonjs()],
     },
   },
 });

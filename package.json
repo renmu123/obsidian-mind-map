@@ -1,7 +1,7 @@
 {
   "name": "vite-project",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vue-tsc --noEmit && vite build --watch",
@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "mind-elixir": "^1.1.0",
     "vue": "^3.2.37"
   },
   "devDependencies": {
