@@ -1,0 +1,31 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vue-tsc --noEmit && vite build --watch",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.4.0",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "obsidian": "^0.12.2",
+    "sass": "^1.54.8",
+    "tslib": "^2.2.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7",
+    "vue-tsc": "^0.39.5"
+  },
+  "exports": {
+    ".": {
+      "require": "./main.js"
+    }
+  }
+}
