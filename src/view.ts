@@ -68,6 +68,7 @@ export class OMMView extends TextFileView {
   }
 
   async onClose() {
+    this.requestSave();
     console.log("close");
 
     this.contentEl.empty();

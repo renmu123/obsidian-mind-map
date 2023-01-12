@@ -35,7 +35,7 @@ export default class MyPlugin extends Plugin {
     );
     this.registerExtensions(["omm"], VIEW_TYPE_OMM);
 
-    this.addSettingTab(new SampleSettingTab(this.app, this));
+    // this.addSettingTab(new SampleSettingTab(this.app, this));
 
     this.registerEvent(
       this.app.workspace.on(
@@ -67,12 +67,6 @@ export default class MyPlugin extends Plugin {
       : this.app.fileManager.getNewFileParent(
           this.app.workspace.getActiveFile()?.path || ""
         );
-    console.log(
-      "targetFolder",
-      // targetFolder,
-      join(targetFolder.path, "Untitled mindmap.omm")
-    );
-
     try {
       // @ts-ignore
       const mindmap: TFile = await this.create(targetFolder);
@@ -90,7 +84,6 @@ export default class MyPlugin extends Plugin {
   }
   async create(targetFolder: TFolder) {
     const path = await this.getAvailablePath(targetFolder);
-    console.log("path", path);
 
     const mindmap: TFile = await this.app.vault.create(path, "");
     return mindmap;
